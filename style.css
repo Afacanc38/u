@@ -1,0 +1,229 @@
+/* FONTS */
+@font-face {
+  font-family: "Cantarell";
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://forty.gnome.org/fonts/cantarell-extra-bold-latin.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+@font-face {
+  font-family: "Cantarell";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://forty.gnome.org/fonts/cantarell-bold-latin.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+@font-face {
+  font-family: "Cantarell";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://forty.gnome.org/fonts/cantarell-regular-latin.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: "Cantarell";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://forty.gnome.org/fonts/cantarell-light.woff2) format("woff2");
+  font-display: block;
+}
+
+:root {
+  --rounded-corner: 12px;
+  --gnomeblue: #1c71d8;
+  --blue1: rgb(153, 193, 241);
+  --blue2: rgb(98, 160, 234);
+  --blue3: rgb(53, 132, 228);
+  --blue4: rgb(28, 113, 216);
+  --blue5: rgb(26, 95, 180);
+  --green1: rgb(143, 240, 164);
+  --green2: rgb(87, 227, 137);
+  --green3: rgb(51, 209, 122);
+  --green4: rgb(46, 194, 126);
+  --green5: rgb(38, 162, 105);
+  --yellow1: rgb(249, 240, 107);
+  --yellow2: rgb(248, 228, 92);
+  --yellow3: rgb(246, 211, 45);
+  --yellow4: rgb(245, 194, 17);
+  --yellow5: rgb(229, 165, 10);
+  --orange1: rgb(255, 190, 111);
+  --orange2: rgb(255, 163, 72);
+  --orange3: rgb(255, 120, 0);
+  --orange4: rgb(230, 97, 0);
+  --orange5: rgb(198, 70, 0);
+  --red1: rgb(246, 97, 81);
+  --red2: rgb(237, 51, 59);
+  --red3: rgb(224, 27, 36);
+  --red4: rgb(192, 28, 40);
+  --red5: rgb(165, 29, 45);
+  --purple1: rgb(220, 138, 221);
+  --purple2: rgb(192, 97, 203);
+  --purple3: rgb(145, 65, 172);
+  --purple4: rgb(129, 61, 156);
+  --purple5: rgb(97, 53, 131);
+  --brown1: rgb(205, 171, 143);
+  --brown2: rgb(181, 131, 90);
+  --brown3: rgb(152, 106, 68);
+  --brown4: rgb(134, 94, 60);
+  --brown5: rgb(99, 69, 44);
+  --light1: rgb(255, 255, 255);
+  --light2: rgb(246, 245, 244);
+  --light3: rgb(222, 221, 218);
+  --light4: rgb(192, 191, 188);
+  --light5: rgb(154, 153, 150);
+  --dark1: rgb(119, 118, 123);
+  --dark2: rgb(94, 92, 100);
+  --dark3: rgb(61, 56, 70);
+  --dark4: rgb(36, 31, 49);
+  --dark5: rgb(0, 0, 0);
+  --text: #f6f5f4;
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: var(--text);
+  transition: outline 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
+}
+*:focus-visible {
+  outline: 5px solid var(--blue1);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Cantarell", -apple-system, BlinkMacSystemFont, "Helvetica",
+    sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  word-spacing: -0.01em;
+  background: var(--dark3);
+  font-size: 1.2em;
+}
+
+.container {
+  width: 85%;
+  margin: 4rem auto;
+  max-width: 900px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.download {
+  display: flex;
+  text-align: center;
+  max-width: 230px;
+  max-height: 230px;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
+  border-radius: 12px;
+  font-size: 1.2em;
+  font-weight: 700;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem;
+  text-decoration: none;
+}
+
+.download:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.download:active {
+  scale: 0.95;
+  border-radius: 24px;
+}
+
+.download:focus-visible {
+  outline: 5px solid var(--blue1);
+}
+
+.download.inactive {
+  opacity: 0.5;
+  cursor:not-allowed;
+}
+
+.download.inactive:hover, .download.inactive:active, .download.inactive:focus-visible {
+  background: transparent;
+  box-shadow: 0 0 0  transparent;
+  scale: 1;
+}
+
+.ayirik {
+  padding: 2rem;
+}
+.ayirik.indir {
+  background: var(--dark4);
+}
+.ayirik.ekbilgi {
+  background: var(--blue5);
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.download > img {
+  max-width: 128px;
+}
+
+.button-container {
+  margin: 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+span.vurgu {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+  border-radius: 1000000px;
+  text-decoration: underline 1px var(--blue3);
+  font-weight: 600;
+}
+
+.resim {
+  min-width: 100%;
+  margin: 2rem 0;
+  border-radius: 24px;
+  transition: all 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
+}
+
+.resim:hover,
+.resim:focus {
+  scale: 1.05;
+}
+
+.resim:active {
+  scale: 1.3;
+  border-radius: 12px;
+  outline: none;
+}
+
+.ayirik.siyah {
+  background: black;
+}
